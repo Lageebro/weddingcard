@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation - Linoshan & Sajiniya</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600&display=swap"
+        rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -47,18 +50,35 @@
         }
 
         @keyframes containerEntrance {
-            0% { opacity: 0; transform: translateY(40px) scale(0.95); }
-            100% { opacity: 1; transform: translateY(0) scale(1); }
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
         @keyframes pulseGlow {
-            0% { box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.4), 0 10px 25px rgba(0,0,0,0.6), 0 0 0 2px rgba(212, 175, 55, 0.6); }
-            100% { box-shadow: inset 0 0 25px rgba(212, 175, 55, 0.6), 0 15px 35px rgba(0,0,0,0.8), 0 0 0 6px rgba(212, 175, 55, 0.7), 0 0 25px rgba(212, 175, 55, 0.5); }
+            0% {
+                box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.4), 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(212, 175, 55, 0.6);
+            }
+
+            100% {
+                box-shadow: inset 0 0 25px rgba(212, 175, 55, 0.6), 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 0 6px rgba(212, 175, 55, 0.7), 0 0 25px rgba(212, 175, 55, 0.5);
+            }
         }
 
         @keyframes goldShine {
-            0% { background-position: -200% center; }
-            100% { background-position: 200% center; }
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
         }
 
         .perspective-container {
@@ -77,7 +97,7 @@
             transform-style: preserve-3d;
             transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
             transform-origin: left center;
-            box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .card-wrapper.open {
@@ -144,9 +164,9 @@
             border-radius: 50%;
             border: 3px solid #d4af37;
             /* Elegant glowing border and depth */
-            box-shadow: 
+            box-shadow:
                 inset 0 0 15px rgba(212, 175, 55, 0.4),
-                0 10px 25px rgba(0,0,0,0.6),
+                0 10px 25px rgba(0, 0, 0, 0.6),
                 0 0 0 2px rgba(212, 175, 55, 0.6);
             z-index: 20;
             cursor: pointer;
@@ -156,13 +176,13 @@
             transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
             animation: pulseGlow 2.5s infinite alternate ease-in-out;
         }
-        
+
         .centerpiece:hover {
             transform: translate(-50%, -50%) scale(1.05);
             animation-play-state: paused;
-            box-shadow: 
+            box-shadow:
                 inset 0 0 25px rgba(212, 175, 55, 0.6),
-                0 15px 35px rgba(0,0,0,0.7),
+                0 15px 35px rgba(0, 0, 0, 0.7),
                 0 0 0 3px rgba(212, 175, 55, 0.8),
                 0 0 20px rgba(212, 175, 55, 0.4);
         }
@@ -176,7 +196,7 @@
             flex-direction: column;
             border: 8px solid #23181c;
             padding: 2rem;
-            box-shadow: inset 0 0 40px rgba(0,0,0,0.1);
+            box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.1);
             overflow-y: auto;
             scrollbar-width: none;
         }
@@ -192,10 +212,29 @@
             pointer-events: none;
         }
 
-        .m-tr { top: 10px; right: 10px; transform: rotate(90deg); }
-        .m-br { bottom: 10px; right: 10px; transform: rotate(180deg); }
-        .m-tl { top: 10px; left: 10px; transform: rotate(0deg); }
-        .m-bl { bottom: 10px; left: 10px; transform: rotate(-90deg); }
+        .m-tr {
+            top: 10px;
+            right: 10px;
+            transform: rotate(90deg);
+        }
+
+        .m-br {
+            bottom: 10px;
+            right: 10px;
+            transform: rotate(180deg);
+        }
+
+        .m-tl {
+            top: 10px;
+            left: 10px;
+            transform: rotate(0deg);
+        }
+
+        .m-bl {
+            bottom: 10px;
+            left: 10px;
+            transform: rotate(-90deg);
+        }
 
         /* Inside content */
         .inner-content {
@@ -223,65 +262,84 @@
             body {
                 padding: 1rem 0.5rem;
             }
+
             .perspective-container {
                 height: 80vh;
                 max-height: 550px;
                 width: 96vw;
             }
+
             .card-wrapper.open {
                 transform: translateX(100%) rotateY(-180deg) scale(0.96);
             }
+
             .centerpiece {
                 width: 130px;
                 height: 130px;
             }
+
             .front-right {
                 padding: 1rem;
             }
-            .ml-10 { margin-left: 1.5rem !important; }
-            .pr-4 { padding-right: 0.5rem !important; }
-            .text-5xl { font-size: 2.5rem !important; }
-            .text-2xl { font-size: 1.25rem !important; }
-            .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+
+            .ml-10 {
+                margin-left: 1.5rem !important;
+            }
+
+            .pr-4 {
+                padding-right: 0.5rem !important;
+            }
+
+            .text-5xl {
+                font-size: 2.5rem !important;
+            }
+
+            .text-2xl {
+                font-size: 1.25rem !important;
+            }
+
+            .space-y-4> :not([hidden])~ :not([hidden]) {
                 margin-top: 0.5rem !important;
             }
         }
-        
     </style>
 </head>
+
 <body>
 
     <!-- Instruction Overlay -->
-    <div id="instruction" class="fixed top-10 text-goldAccent opacity-80 animate-pulse text-sm font-serif tracking-widest z-0 pointer-events-none">
+    <div id="instruction"
+        class="fixed top-10 text-goldAccent opacity-80 animate-pulse text-sm font-serif tracking-widest z-0 pointer-events-none">
         TAP THE CENTER BADGE TO OPEN
     </div>
 
     <div class="perspective-container">
         <div class="card-wrapper" id="card">
-            
+
             <!-- FRONT COVER -->
             <div class="face front-face">
                 <div class="front-left">
                     <div class="mandala m-tl opacity-30"></div>
                     <div class="mandala m-bl opacity-30"></div>
                 </div>
-                
+
                 <div class="front-right">
                     <div class="mandala m-tr"></div>
                     <div class="mandala m-br"></div>
-                    
+
                     <div class="text-center font-cinzel text-darkBase tracking-widest space-y-4 pr-4 ml-10">
                         <p class="text-xs uppercase tracking-[0.3em] text-gray-500 mb-6">Wedding Ceremony</p>
-                        
+
                         <div class="space-y-2 py-8 relative">
                             <h2 class="text-2xl font-bold">INVITATION</h2>
-                            <p class="text-[0.6rem] uppercase tracking-widest text-darkBase/70">To our beloved families</p>
+                            <p class="text-[0.6rem] uppercase tracking-widest text-darkBase/70">To our beloved families
+                            </p>
                         </div>
 
                         <div class="pt-8">
-                            <p class="text-[0.7rem] uppercase tracking-wider text-gray-600">Linoshan</p>
-                            <p class="text-[0.6rem] mx-2 text-goldAccent my-1">&amp;</p>
-                            <p class="text-[0.7rem] uppercase tracking-wider text-gray-600">Sajiniya</p>
+                            <p class="text-4xl font-script text-goldAccent tracking-wide drop-shadow-sm">
+                                L <span class="font-serif text-xl mx-2 text-darkBase/50">&amp;</span> S
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -297,20 +355,24 @@
                         <img src="logo.jpeg" alt="Wedding Logo" class="w-full h-full object-cover">
                     </div>
                     <!-- Decorative elements around centerpiece -->
-                    <svg class="absolute -top-4 -left-4 w-12 h-12 text-goldAccent opacity-70" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                    <div class="absolute -top-4 -left-4 text-4xl z-20 drop-shadow-md opacity-90">💌</div>
                 </div>
             </div>
 
             <!-- INSIDE COVER -->
             <div class="face back-face relative overflow-hidden" style="padding: 0; border: none;">
                 <!-- Close Button -->
-                <button onclick="toggleCard()" class="absolute top-4 right-4 z-50 w-8 h-8 rounded-full bg-darkBase text-goldAccent flex items-center justify-center hover:bg-goldAccent hover:text-darkBase transition-colors shadow-md">
+                <button onclick="toggleCard()"
+                    class="absolute top-4 right-4 z-50 w-8 h-8 rounded-full bg-darkBase text-goldAccent flex items-center justify-center hover:bg-goldAccent hover:text-darkBase transition-colors shadow-md">
                     <i class="fas fa-times"></i>
                 </button>
 
                 <div class="inner-content w-full h-full relative">
-                    <img id="inviteImage" src="English.jpg" alt="Wedding Invitation" class="w-full h-full object-cover transition-opacity duration-500" style="opacity: 1;">
-                    <button id="langToggleBtn" onclick="toggleLanguage()" class="absolute bottom-6 left-1/2 -translate-x-1/2 px-8 py-2 bg-darkBase text-goldAccent border border-goldAccent rounded-full font-serif font-bold text-sm tracking-wider hover:bg-goldAccent hover:text-darkBase transition-colors shadow-xl z-50">
+                    <img id="inviteImage" src="English.jpg" alt="Wedding Invitation"
+                        class="w-full h-full object-contain transition-opacity duration-500"
+                        style="opacity: 1; -webkit-transform: translateZ(0); transform: translateZ(0); image-rendering: -webkit-optimize-contrast;">
+                    <button id="langToggleBtn" onclick="toggleLanguage()"
+                        class="absolute bottom-6 left-1/2 -translate-x-1/2 px-8 py-2 bg-darkBase text-goldAccent border border-goldAccent rounded-full font-serif font-bold text-sm tracking-wider hover:bg-goldAccent hover:text-darkBase transition-colors shadow-xl z-50">
                         Tamil
                     </button>
                 </div>
@@ -322,7 +384,7 @@
         // DOM Elements
         const card = document.getElementById('card');
         const instruction = document.getElementById('instruction');
-        
+
         // Toggle Card Animation
         function toggleCard() {
             card.classList.toggle('open');
@@ -342,14 +404,14 @@
 
             const img = document.getElementById('inviteImage');
             const btn = document.getElementById('langToggleBtn');
-            
+
             // Fade out the current image
             img.style.opacity = '0';
-            
+
             // Wait for fade out to complete before swapping src
             setTimeout(() => {
                 // Setup onload to fade in once the new image is ready
-                img.onload = function() {
+                img.onload = function () {
                     img.style.opacity = '1';
                     isTogglingLanguage = false;
                 };
@@ -358,7 +420,7 @@
                     img.src = 'Tmail.jpg';
                     btn.textContent = 'English';
                     // Fallback in case the user renames 'Tmail.jpg' to 'Tamil.jpg' later
-                    img.onerror = function() {
+                    img.onerror = function () {
                         if (img.src.includes('Tmail.jpg')) {
                             img.src = 'Tamil.jpg';
                         } else {
@@ -375,4 +437,5 @@
         }
     </script>
 </body>
+
 </html>
